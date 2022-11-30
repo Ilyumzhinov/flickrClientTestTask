@@ -7,18 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		505095A92935159D008178B2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505095A82935159D008178B2 /* Model.swift */; };
+		505095AB293519C0008178B2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505095AA293519C0008178B2 /* ViewModel.swift */; };
 		50CA39AF2934DA460042B46F /* flickrClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA39AE2934DA460042B46F /* flickrClientApp.swift */; };
-		50CA39B12934DA460042B46F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA39B02934DA460042B46F /* ContentView.swift */; };
+		50CA39B12934DA460042B46F /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA39B02934DA460042B46F /* FeedView.swift */; };
 		50CA39B32934DA490042B46F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50CA39B22934DA490042B46F /* Assets.xcassets */; };
 		50CA39B62934DA490042B46F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50CA39B52934DA490042B46F /* Preview Assets.xcassets */; };
+		50DECDDA29365C4900488248 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DECDD929365C4900488248 /* Utilities.swift */; };
+		50DECDDC29367A0300488248 /* ImagePreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DECDDB29367A0300488248 /* ImagePreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		505095A82935159D008178B2 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		505095AA293519C0008178B2 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		50CA39AB2934DA460042B46F /* flickrClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flickrClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50CA39AE2934DA460042B46F /* flickrClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flickrClientApp.swift; sourceTree = "<group>"; };
-		50CA39B02934DA460042B46F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		50CA39B02934DA460042B46F /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		50CA39B22934DA490042B46F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50CA39B52934DA490042B46F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		50CA39BC2934DAC40042B46F /* flickr.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = flickr.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		50DECDD929365C4900488248 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		50DECDDB29367A0300488248 /* ImagePreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +41,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		502D8C2529379D00001726F0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				50DECDDB29367A0300488248 /* ImagePreView.swift */,
+				50CA39B02934DA460042B46F /* FeedView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		502D8C2629379D0F001726F0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				505095A82935159D008178B2 /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		502D8C2729379D21001726F0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				505095AA293519C0008178B2 /* ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		50CA39A22934DA460042B46F = {
 			isa = PBXGroup;
 			children = (
@@ -51,10 +85,14 @@
 		50CA39AD2934DA460042B46F /* flickrClient */ = {
 			isa = PBXGroup;
 			children = (
+				502D8C2629379D0F001726F0 /* Models */,
+				502D8C2529379D00001726F0 /* Views */,
+				502D8C2729379D21001726F0 /* ViewModels */,
+				50CA39BC2934DAC40042B46F /* flickr.playground */,
 				50CA39AE2934DA460042B46F /* flickrClientApp.swift */,
-				50CA39B02934DA460042B46F /* ContentView.swift */,
 				50CA39B22934DA490042B46F /* Assets.xcassets */,
 				50CA39B42934DA490042B46F /* Preview Content */,
+				50DECDD929365C4900488248 /* Utilities.swift */,
 			);
 			path = flickrClient;
 			sourceTree = "<group>";
@@ -137,7 +175,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50CA39B12934DA460042B46F /* ContentView.swift in Sources */,
+				50DECDDC29367A0300488248 /* ImagePreView.swift in Sources */,
+				505095A92935159D008178B2 /* Model.swift in Sources */,
+				50CA39B12934DA460042B46F /* FeedView.swift in Sources */,
+				505095AB293519C0008178B2 /* ViewModel.swift in Sources */,
+				50DECDDA29365C4900488248 /* Utilities.swift in Sources */,
 				50CA39AF2934DA460042B46F /* flickrClientApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +309,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"flickrClient/Preview Content\"";
+				DEVELOPMENT_TEAM = E6HTW6H8CA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -274,6 +317,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,6 +339,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"flickrClient/Preview Content\"";
+				DEVELOPMENT_TEAM = E6HTW6H8CA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -302,6 +347,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
