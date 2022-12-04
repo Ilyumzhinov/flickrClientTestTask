@@ -13,16 +13,14 @@ struct ImagePreView : View {
                 .background(.black)
                 .opacity(0.9)
             
-            Button {
+            AsyncImage(url: .init(string: imageURL)) { image in
+                image
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            } placeholder: { Color.clear }
+        }
+        .onTapGesture {
                 imageURL = ""
-            } label: {
-                AsyncImage(url: .init(string: imageURL)) { image in
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                } placeholder: { Color.clear }
-            }
-            .buttonStyle(PlainButtonStyle())
         }
     }
 }

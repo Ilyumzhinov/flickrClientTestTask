@@ -6,17 +6,14 @@ class ViewModel: ObservableObject {
     private var model: Response
     
     init(items: [Item]? = nil) {
-        if let items {
-            self.model = .init(items: items)
-        }
-        else {
-            self.model = .init(items: [])
-            Task {
-                let data = await self.model.loadData()
-                DispatchQueue.main.async {
-                    self.model.items = data
-                }
-            }
+            self.model = .init(items: items ?? [])
+    }
+    
+    /// Loads Model's data
+    func loadData() async {
+        let data = await self.model.loadData()
+        DispatchQueue.main.async {
+            self.model.items = data
         }
     }
 }
