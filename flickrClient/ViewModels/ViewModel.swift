@@ -89,7 +89,7 @@ extension ViewModel {
     /// Specifies a sort order.
     /// Supported sorts (both ascending and descending): by title and date
     enum SortBy: String {
-        case defaults = "Sort"
+        case defaults = "Default"
         case title = "Title ↑"
         case titleDesc = "Title ↓"
         case date = "Date ↑"
